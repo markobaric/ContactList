@@ -1,0 +1,16 @@
+C:\Marko\Projects\ContactList\BLL\bin\Debug\AutoMapper.Net4.dll
+C:\Marko\Projects\ContactList\BLL\bin\Debug\BLL.dll.config
+C:\Marko\Projects\ContactList\BLL\bin\Debug\BLL.dll
+C:\Marko\Projects\ContactList\BLL\bin\Debug\BLL.pdb
+C:\Marko\Projects\ContactList\BLL\bin\Debug\AutoMapper.dll
+C:\Marko\Projects\ContactList\BLL\bin\Debug\DAL.dll
+C:\Marko\Projects\ContactList\BLL\bin\Debug\EntityFramework.dll
+C:\Marko\Projects\ContactList\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Marko\Projects\ContactList\BLL\bin\Debug\SpecExpress.dll
+C:\Marko\Projects\ContactList\BLL\bin\Debug\DAL.pdb
+C:\Marko\Projects\ContactList\BLL\bin\Debug\AutoMapper.xml
+C:\Marko\Projects\ContactList\BLL\bin\Debug\EntityFramework.xml
+C:\Marko\Projects\ContactList\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Marko\Projects\ContactList\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Marko\Projects\ContactList\BLL\obj\Debug\BLL.dll
+C:\Marko\Projects\ContactList\BLL\obj\Debug\BLL.pdb

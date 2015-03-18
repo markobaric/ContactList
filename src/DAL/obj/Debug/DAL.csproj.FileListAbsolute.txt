@@ -1,0 +1,9 @@
+C:\Marko\Projects\ContactList\DAL\bin\Debug\DAL.dll.config
+C:\Marko\Projects\ContactList\DAL\bin\Debug\DAL.dll
+C:\Marko\Projects\ContactList\DAL\bin\Debug\DAL.pdb
+C:\Marko\Projects\ContactList\DAL\bin\Debug\EntityFramework.dll
+C:\Marko\Projects\ContactList\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Marko\Projects\ContactList\DAL\bin\Debug\EntityFramework.xml
+C:\Marko\Projects\ContactList\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Marko\Projects\ContactList\DAL\obj\Debug\DAL.dll
+C:\Marko\Projects\ContactList\DAL\obj\Debug\DAL.pdb

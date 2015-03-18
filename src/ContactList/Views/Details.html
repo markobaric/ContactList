@@ -1,0 +1,140 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">Contact Info</div>
+    <div class="panel-body">
+        <form name="contactForm" class="form-horizontal" novalidate>
+            <div class="form-group margin-top" ng-class="{ 'has-error' : contactForm.FirstName.$invalid && !contactForm.FirstName.$pristine }">
+                <label for="inputStandard" for="FirstName" class="col-lg-2 control-label">First Name</label>
+                <div class="col-lg-10">
+                    <input type="text" name="FirstName" id="FirstName" class="form-control" placeholder="Enter first name..." ng-model="contact.FirstName" ng-maxlength="20" required>
+                </div>
+            </div>
+            <div class="form-group margin-top" ng-class="{ 'has-error' : contactForm.LastName.$invalid && !contactForm.LastName.$pristine }">
+                <label for="inputStandard" for="LastName" class="col-lg-2 control-label">Last Name</label>
+                <div class="col-lg-10">
+                    <input type="text" name="LastName" id="LastName" class="form-control" placeholder="Enter last name..." ng-model="contact.LastName" ng-maxlength="20" required>
+                </div>
+            </div>
+            <div class="form-group margin-top">
+                <label for="inputStandard" for="Address" class="col-lg-2 control-label">Address</label>
+                <div class="col-lg-10">
+                    <input type="text" id="Address" class="form-control" placeholder="Enter address..." ng-model="contact.Address" ng-maxlength="20">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Phones</div>
+    <div class="panel-body">
+        <form name="phoneForm" class="form-horizontal" novalidate>
+            <div class="form-group margin-top" ng-class="{'has-error': phoneForm.Number.$invalid}">
+                <label for="inputStandard" for="Number" class="col-lg-2 control-label">Number</label>
+                <div class="col-lg-4">
+                    <input type="text" name="Number" id="Number" class="form-control" placeholder="Enter number..." ng-model="phone.Number" ng-maxlength="20">
+                </div>
+                <div class="col-lg-4">
+                    <select class="form-control" ng-model="phone.Type" ng-options="entryType.Name as entryType.Name for entryType in entryTypes">
+                        <option value="" ng-show="!phone.Type" disabled>Select type...</option>
+                    </select>
+                </div>
+                <button class="btn btn-default" ng-click="addPhone()" ng-disabled="phoneForm.$invalid">Add</button>
+            </div>
+        </form>
+        <table ng-show="phones != undefined && phones.length > 0" class="table table-condensed">
+            <thead>
+                <tr class="active">
+                    <th>Number</th>
+                    <th>Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="phone in phones">
+                    <td>{{phone.Number}}</td>
+                    <td>{{phone.Type.Name}}</td>
+                    <td align="right">
+                        <div class="btn-group">
+                            <a class="btn btn-small" ng-click="deletePhone(phone.Id)"><i class="glyphicon glyphicon-trash"></i> Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Emails</div>
+    <div class="panel-body">
+        <form name="emailForm" class="form-horizontal">
+            <div class="form-group margin-top" ng-class="{'has-error': emailForm.Email.$invalid}">
+                <label for="inputStandard" for="Email" class="col-lg-2 control-label">Email Address</label>
+                <div class="col-lg-4">
+                    <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter email address..." ng-model="email.Address" ng-maxlength="50">
+                </div>
+                <div class="col-lg-4">
+                    <select class="form-control" ng-model="email.Type" ng-options="entryType.Name as entryType.Name for entryType in entryTypes">
+                        <option value="" ng-show="!email.Type" disabled>Select type...</option>
+                    </select>
+                </div>
+                <button class="btn btn-default" ng-click="addEmail()" ng-disabled="emailForm.$invalid">Add</button>
+            </div>
+        </form>
+        <table ng-show="emails != undefined && emails.length > 0" class="table table-condensed">
+            <thead>
+                <tr class="active">
+                    <th>Address</th>
+                    <th>Type</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="email in emails">
+                    <td>{{email.Address}}</td>
+                    <td>{{email.Type.Name}}</td>
+                    <td align="right">
+                        <div class="btn-group">
+                            <a class="btn btn-small" ng-click="deleteEmail(email.Id)"><i class="glyphicon glyphicon-trash"></i> Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">Tags</div>
+    <div class="panel-body">
+        <form name="tagForm" class="form-horizontal">
+            <div class="form-group margin-top" ng-class="{'has-error': tagForm.Text.$invalid}">
+                <label for="inputStandard" for="Tags" class="col-lg-2 control-label">Tag</label>
+                <div class="col-lg-4">
+                    <input type="text" name="Text" id="Text" class="form-control" placeholder="Enter tag..." ng-model="tag.Text" ng-maxlength="20">
+                </div>
+                <button class="btn btn-default" ng-click="addTag()" ng-disabled="tagForm.$invalid">Add</button>
+            </div>
+        </form>
+        <table ng-show="tags != undefined && tags.length > 0" class="table table-condensed">
+            <thead>
+                <tr class="active">
+                    <th>Tag</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tag in tags">
+                    <td>{{tag.Text}}</td>
+                    <td align="right">
+                        <div class="btn-group">
+                            <a class="btn btn-small" ng-click="deleteTag(tag.Id)"><i class="glyphicon glyphicon-trash"></i> Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Buttons -->
+<div class="form-actions pull-right" style="margin-bottom: 20px">
+    <button class="btn btn-primary" ng-click="save()" ng-disabled="contactForm.$invalid">Save</button>
+    <a href="#/" class="btn btn-default">Cancel</a>
+</div>

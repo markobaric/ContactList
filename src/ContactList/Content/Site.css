@@ -1,0 +1,13 @@
+﻿/*.panel-heading {
+  background-color: #428bca !important;
+  color: white !important;
+}*/
+
+.noty_message{
+    margin: 0
+}
+
+ul#noty_bottom_layout_container li
+{
+    margin-bottom: 0px;
+}
