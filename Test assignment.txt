@@ -1,0 +1,22 @@
+
++++++++++++++++++++++++++++++++++++++
+ TEST ASSIGNMENT
++++++++++++++++++++++++++++++++++++++
+
+Create a single page web application which will be used as phone book or contact list. Functionalities should be similar to a phone book on a smartphone.
+
+Application must have the following features:
+- Creating, deleting and editing of contacts
+- Each contact can have following properties:
+	- First Name
+	- Last Name
+	- Address
+	- List of phone numbers
+	- List of email addresses
+	- List of tags
+- Contacts can be searched by First Name, Last Name or any of the Tags
+- Searching must be performed on the server, not on the client. This means that only contacts that meet the search criteria will be retreived from the server.
+- Contacts can be bookmarked in browser and back/forward browser buttons must be supported
+- Application is intended to be used by a single user (no login page, user handling, sessions, etc.)
+
+Frontent should be implemented with AngularJS and backend with ASP.NET WebAPI. Data should be persisted in SQL Server database.

@@ -1,0 +1,22 @@
+
+- Data is stored in SQL Server database
+- Entity Framework 6 Code First is used as ORM
+- Application is built on 3-tier architecture (Data Access Layer, Business Logic Layer, Presentation Layer)
+- DAL is implemented with Repository and UnitOfWork patterns
+- BLL exposes services to work with each of the domain model entities
+- Transformation from entity objects to model (domain) objects is done with AutoMapper
+- Validation of data is implemented with SpecExpress
+- Ninject is used as IoC in Web API to inject instances of services to controllers
+- When contacts are updated, the complete contact graph is sent from the client to the server after all the phones, emails and tags have been edited. 
+This is not optimal, but it's good enough for this simple app. Better way would be to post only changed data when updating contact.
+- Bootstrap has been used for frontend styling 
+
+
+****
+**** What I chose not to implement because this is simple application and did not want to over-engineer:
+****
+- One more layer above BLL. This Service Layer would handle authentication and access control if it was required
+- In case that one more layer was introduced, I would use View Model objects to exchange data with the client. 
+In current implementation, model objects (domain objects) from BLL are also view model objects that are exchanged with clients. 
+- Confirmation dialog when deleting the contact has not been implemented and it should be implemented
+- Unit test are missing

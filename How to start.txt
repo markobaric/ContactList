@@ -1,0 +1,4 @@
+- Set the connection string in src/ContactList/web.config
+- Set the ContactList project in solution to be a startup project
+- Build and start
+- The database will be automatically created and filled with initial data
